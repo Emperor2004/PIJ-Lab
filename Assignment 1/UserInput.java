@@ -21,4 +21,16 @@ class UserInput {
         int number = scan.nextInt();
         return number;
     }
+
+    int[] userInputArray() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter no.of items in the array:");
+        int num = scan.nextInt();
+
+        int[] array = new int[num];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = scan.nextInt();
+        }
+        return array;
+    }
 }
