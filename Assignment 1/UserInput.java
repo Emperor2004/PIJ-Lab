@@ -3,7 +3,7 @@ import java.util.*;
 
 class UserInput {
 
-    int[] userInput() {
+    int[] userInputDouble() {
         int[] numbers = new int[2];
         Scanner scan = new Scanner(System.in);
 
@@ -14,5 +14,11 @@ class UserInput {
         numbers[1] = scan.nextInt();
 
         return numbers;
+    }
+
+    int userInputSingle() {
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        return number;
     }
 }
