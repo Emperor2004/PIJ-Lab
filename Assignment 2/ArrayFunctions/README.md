@@ -1,0 +1,1 @@
+This assignment deals with Array Functions like displaying the array, displaying odd and even numbers of the array, and displaying difference of adjacent elements in the array.
