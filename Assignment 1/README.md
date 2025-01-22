@@ -1,0 +1,1 @@
+This Assignment deals with a Calculator class ddoes add, subtract, multiply, divide, fibonacci series, mean and variance.
