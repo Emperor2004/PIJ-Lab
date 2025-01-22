@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 class Main {
@@ -6,6 +7,7 @@ class Main {
         Calculator cal = new Calculator();
 
         Scanner scanch = new Scanner(System.in);
+        System.out.println("Enter your choice: \n1) Add \n2) Substract \n3) Multiply \n4) Divide \n5) Fibonacci Series \n6) Mean \n7) Variance");
         int ch = scanch.nextInt();
 
         switch (ch) {
@@ -18,8 +20,20 @@ class Main {
             case 3:
                 System.out.println("Product is: " + cal.multiply());
                 break;
+            case 4:
+                System.out.println("Result is: " + cal.division());
+                break;
+            case 5:
+                System.out.println("Series:\n" + Arrays.toString(cal.fibonacci()));
+                break;
+            case 6:
+                System.out.println("Mean is: " + cal.mean());
+                break;
+            case 7:
+                System.out.println("Variance is: " + cal.variance());
+                break;
             default:
-                throw new AssertionError();
+                System.out.println("Invalid choice!");
         }
         
         
