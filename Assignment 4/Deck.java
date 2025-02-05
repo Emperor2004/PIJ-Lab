@@ -18,4 +18,10 @@ class Deck {
             }
         }
     }
+
+    public void displayDeck() {
+        for (Card card : deck) {
+            System.out.println(card);
+        }
+    }
 }
