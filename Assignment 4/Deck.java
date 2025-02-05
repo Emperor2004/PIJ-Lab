@@ -24,4 +24,8 @@ class Deck {
             System.out.println(card);
         }
     }
+
+    public void shuffleDeck() {
+        Collections.shuffle(deck);
+    }
 }
