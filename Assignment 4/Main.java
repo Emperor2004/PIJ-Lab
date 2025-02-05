@@ -6,5 +6,8 @@ class Main {
         System.out.println("------------Deck Created---------------");
         System.out.println("------------Printing Deck---------------");
         deck.displayDeck();
+        System.out.println("------------Shuffled Deck---------------");
+        deck.shuffleDeck();
+        deck.displayDeck();
     }
 }
