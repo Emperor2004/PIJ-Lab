@@ -28,4 +28,15 @@ class Deck {
     public void shuffleDeck() {
         Collections.shuffle(deck);
     }
+
+    // Select two random cards from the deck
+    public void randomCard() {
+        System.out.println(deck.get(1));
+        System.out.println(deck.get(2));
+    }
+
+    // Create 3 players and distribute 5 cards at random to player and display cards of all players
+    public void cardPlayers() {
+
+    }
 }
