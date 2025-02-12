@@ -22,7 +22,7 @@ abstract class Shape {
     abstract public double calculateArea(); // Abstract Method
     abstract public double calculatePerimeter(); // Abstract Method
 
-    public int getSides(){
+    public int getNumSides(){
         return num_sides;
     }
 
