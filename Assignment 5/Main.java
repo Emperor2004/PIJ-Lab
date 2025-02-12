@@ -23,7 +23,7 @@ class Main {
         Shape circle = new Circle(radius);
         System.out.println("-------------------------");
         System.out.println("Area of Circle: " + circle.calculateArea());
-        System.out.println("Perimeter of Circle: " + circle.calculatePerimeter());
+        System.out.println("Perimeter of Circle: " + Math.floor(circle.calculatePerimeter()));
         System.out.println("Number of sides in Circle: " + circle.getNumSides());
         System.out.println("-------------------------");
 
