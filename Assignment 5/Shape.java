@@ -18,4 +18,13 @@ abstract class Shape {
         this.dim_three = dim_three;
         this.num_sides = num_sides;
     }
+
+    abstract public double calculateArea(); // Abstract Method
+    abstract public double calculatePerimeter(); // Abstract Method
+
+    public int getSides(){
+        return num_sides;
+    }
+
+    
 }
