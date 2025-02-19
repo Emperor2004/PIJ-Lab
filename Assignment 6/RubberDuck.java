@@ -1,4 +1,10 @@
-package PACKAGE_NAME;
+public class RubberDuck extends Duck{
+    public  RubberDuck() {
+        quackBehaviour = new Quack();
+    }
 
-public class RubberDuck {
+    @Override
+    public void display() {
+        System.out.println("I am Mallard Duck");
+    }
 }

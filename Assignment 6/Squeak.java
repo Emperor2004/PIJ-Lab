@@ -1,6 +1,6 @@
-public class Squeack implements QuackBehavior {
+public class Squeak implements QuackBehavior {
     @Override
     public void quack() {
-        System.out.println("Squeack Squeack!");
+        System.out.println("Squeak Squeak!");
     }
 }
