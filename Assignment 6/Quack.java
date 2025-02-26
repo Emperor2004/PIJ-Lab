@@ -1,6 +1,6 @@
-public class Quack implements QuackBehavior {
-    @Override
+public class Quack implements QuackBehaviour{
     public void quack() {
-        System.out.println("Quack Quack!");
+        System.out.println("Quack Quack !!");
     }
+
 }
