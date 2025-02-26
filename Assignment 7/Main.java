@@ -1,13 +1,21 @@
 class Main {
-    public static void main(String args[]) {
-        int a = 2;
-        int b = 0;
 
+    public static void checkAge(int age) throws AgeException {
+        if (age < 18) {
+            throw new AgeException("Age not qualified");
+        }
+        else {
+            System.out.println("Valid...");
+        }
+    }
+    public static void main(String args[]) {
         try {
-            System.out.println("Division is: " + a/b);
-        } catch (ArithmeticException e) {
-            // System.out.println("Denominator is Zero");
-            e.printStackTrace(System.out);
+            checkAge(12);
+        } catch (AgeException e) {
+            System.out.println(e);
+        }
+        finally {
+            System.out.println("Done.");
         }
     }
 }
