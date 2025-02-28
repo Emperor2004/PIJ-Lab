@@ -5,15 +5,18 @@ import java.util.*;
 class StudentOperations {
     private ArrayList<Student> students;
 
+    // Constructor to initialize the student list
     public StudentOperations() {
         this.students = new ArrayList<>();
     }
 
+    // Method to add a student to the list
     public void addStudent(Student student) {
         students.add(student);
         System.out.println("Student added successfully.");
     }
 
+    // Method to display all students
     public void displayStudents() {
         if (students.isEmpty()) {
             System.out.println("No students to display.");
@@ -24,6 +27,7 @@ class StudentOperations {
         }
     }
 
+    // Method to search for a student by PRN
     public Student searchByPRN(long prn) {
         for (Student student : students) {
             if (student.getPRN() == prn) {
@@ -33,6 +37,7 @@ class StudentOperations {
         return null;
     }
 
+    // Method to search for a student by Name
     public Student searchByName(String name) {
         for (Student student : students) {
             if (student.getName().equalsIgnoreCase(name)) {
@@ -42,6 +47,7 @@ class StudentOperations {
         return null;
     }
 
+    // Method to update a student's name based on PRN
     public void updateStudent(long prn, String newName) {
         Student student = searchByPRN(prn);
         if (student != null) {
@@ -52,6 +58,7 @@ class StudentOperations {
         }
     }
 
+    // Method to delete a student based on PRN
     public void deleteStudent(long prn) {
         Student student = searchByPRN(prn);
         if (student != null) {
