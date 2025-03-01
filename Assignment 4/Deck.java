@@ -21,4 +21,10 @@ class Deck {
         }
     }
 
+    public void printDeck() {
+        for (Card card : deck) {
+            System.out.println(card);
+        }
+    }
+
 }
