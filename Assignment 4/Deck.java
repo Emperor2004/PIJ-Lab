@@ -35,4 +35,12 @@ class Deck {
         }
     }
 
+    public void sameCard(String suit) {
+        for (Card card : deck) {
+            if (card.suit.equalsIgnoreCase(suit)) {
+                System.out.println(card);
+            }
+        }
+    }
+
 }
