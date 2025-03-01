@@ -43,4 +43,12 @@ class Deck {
         }
     }
 
+    public void compareCard(String rank) {
+        for (Card card : deck) {
+            if (card.rank.equalsIgnoreCase(rank)) {
+                System.out.println(card);
+            }
+        }
+    }
+
 }
