@@ -51,4 +51,15 @@ class Deck {
         }
     }
 
+    public boolean findCard(String rank, String suit) {
+        for (Card card : deck) {
+            if (card.rank.equalsIgnoreCase(rank) && card.suit.equalsIgnoreCase(suit)) {
+                System.out.println("Card Found: " + card);
+                return true;
+            }
+        }
+        System.out.println("Card not found.");
+        return false;
+    }
+
 }
