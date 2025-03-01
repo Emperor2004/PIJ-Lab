@@ -27,4 +27,12 @@ class Deck {
         }
     }
 
+    public void printCard(int index) {
+        if (index >= 0 && index < deck.size()) {
+            System.out.println(deck.get(index));
+        } else {
+            System.out.println("Invalid card index!");
+        }
+    }
+
 }
