@@ -62,4 +62,11 @@ class Deck {
         return false;
     }
 
+    public void dealCard() {
+        Collections.shuffle(deck);
+        for (int i = 0; i < 5; i++) {
+            System.out.println(deck.get(i));
+        }
+    }
+
 }
