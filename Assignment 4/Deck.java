@@ -69,4 +69,8 @@ class Deck {
         }
     }
 
+    public void shuffleDeck() {
+        Collections.shuffle(deck);
+        System.out.println("Deck shuffled!");
+    }
 }
