@@ -6,6 +6,7 @@ Batch: AIML B1
 
 import java.util.*;
 
+// Main class provides a menu-driven interface for interacting with the deck
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

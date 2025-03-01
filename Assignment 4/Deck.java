@@ -1,5 +1,6 @@
 import java.util.*;
 
+// Manages the deck of 52 cards and provides various operations
 class Deck {
     ArrayList<Card> deck;
 
