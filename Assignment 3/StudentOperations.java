@@ -10,9 +10,10 @@ class StudentOperations {
         this.students = new ArrayList<>();
     }
 
-    // Method to add a student to the list
+    // Method to add a student to the list and sort by PRN
     public void addStudent(Student student) {
         students.add(student);
+        students.sort(Comparator.comparingLong(Student::getPRN)); // Sorting by PRN
         System.out.println("Student added successfully.");
     }
 
@@ -23,11 +24,11 @@ class StudentOperations {
             return;
         }
         for (Student student : students) {
-            student.display();
+            System.out.println(student.display());
         }
     }
 
-    // Method to search for a student by PRN
+    // Method to search student by PRN
     public Student searchByPRN(long prn) {
         for (Student student : students) {
             if (student.getPRN() == prn) {
@@ -37,7 +38,7 @@ class StudentOperations {
         return null;
     }
 
-    // Method to search for a student by Name
+    // Method to search student by Name
     public Student searchByName(String name) {
         for (Student student : students) {
             if (student.getName().equalsIgnoreCase(name)) {
@@ -47,18 +48,27 @@ class StudentOperations {
         return null;
     }
 
-    // Method to update a student's name based on PRN
-    public void updateStudent(long prn, String newName) {
+    // Method to search student by position
+    public Student searchByPosition(int position) {
+        if (position >= 0 && position < students.size()) {
+            return students.get(position);
+        }
+        return null;
+    }
+
+    // Method to update student details
+    public void updateStudent(long prn, String newName, double newMarks) {
         Student student = searchByPRN(prn);
         if (student != null) {
             student.setName(newName);
+            student.setMarks(newMarks);
             System.out.println("Student updated successfully.");
         } else {
             System.out.println("Student not found.");
         }
     }
 
-    // Method to delete a student based on PRN
+    // Method to delete a student
     public void deleteStudent(long prn) {
         Student student = searchByPRN(prn);
         if (student != null) {

@@ -1,37 +1,55 @@
 // Class representing a student with attributes and methods
 
+import java.util.Date;
+
 class Student {
     private String name;
     private long prn;
+    private Date dob;
+    private double marks;
 
     // Constructor to initialize Student attributes
-    public Student(String name, long prn) {
+    public Student(String name, long prn, Date dob, double marks) {
         this.name = name;
         this.prn = prn;
+        this.dob = dob;
+        this.marks = marks;
     }
 
-    // Setter for name
+    // Setter and Getter for name
     public void setName(String name) {
         this.name = name;
     }
-
-    // Getter for name
     public String getName() {
         return name;
     }
 
-    // Setter for PRN
+    // Setter and Getter for PRN
     public void setPRN(long prn) {
         this.prn = prn;
     }
-
-    // Getter for PRN
     public long getPRN() {
         return prn;
     }
 
+    // Setter and Getter for Date of Birth
+    public void setDOB(Date dob) {
+        this.dob = dob;
+    }
+    public Date getDOB() {
+        return dob;
+    }
+
+    // Setter and Getter for Marks
+    public void setMarks(double marks) {
+        this.marks = marks;
+    }
+    public double getMarks() {
+        return marks;
+    }
+
     // Method to display student details
-    public void display() {
-        System.out.println("Name: " + name + ", PRN: " + prn);
+    public String display() {
+        return "Name: " + name + ", PRN: " + prn + ", DOB: " + dob + ", Marks: " + marks;
     }
 }
