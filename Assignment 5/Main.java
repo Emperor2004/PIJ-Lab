@@ -1,11 +1,16 @@
+/*
+Name: Om Narayan Pandit
+PRN: 23070126083
+Batch: AIML B1
+*/
 
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        while (true) {
+        Scanner scan = new Scanner(System.in); // Scanner object for user input
+        
+        while (true) { // Infinite loop to keep showing the menu until exit
             System.out.println("\nSelect Shape to Calculate:");
             System.out.println("1. Circle");
             System.out.println("2. Rectangle");
@@ -16,59 +21,62 @@ public class Main {
             System.out.println("7. Exit");
             System.out.print("Enter your choice: ");
 
-            int choice = scan.nextInt();
+            int choice = scan.nextInt(); // Read user's choice
             Shape shape = null;
+            
             switch (choice) {
-                case 1 -> {
+                case 1:
                     System.out.print("Enter radius: ");
-                    double radius = scan.nextDouble();
+                    double radius = scan.nextDouble(); // Read radius input
                     shape = new Circle(radius);
-                }
-                case 2 -> {
+                    break;
+                case 2:
                     System.out.print("Enter length: ");
-                    double length = scan.nextDouble();
+                    double length = scan.nextDouble(); // Read length input
                     System.out.print("Enter width: ");
-                    double width = scan.nextDouble();
+                    double width = scan.nextDouble(); // Read width input
                     shape = new Rectangle(length, width);
-                }
-                case 3 -> {
+                    break;
+                case 3:
                     System.out.print("Enter side length: ");
-                    double side = scan.nextDouble();
+                    double side = scan.nextDouble(); // Read side length for square
                     shape = new Square(side);
-                }
-                case 4 -> {
+                    break;
+                case 4:
                     System.out.print("Enter radius: ");
-                    double radius = scan.nextDouble();
+                    radius = scan.nextDouble(); // Read radius input for sphere
                     shape = new Sphere(radius);
-                }
-                case 5 -> {
+                    break;
+                case 5:
                     System.out.print("Enter radius: ");
-                    double radius = scan.nextDouble();
+                    radius = scan.nextDouble(); // Read radius input for cylinder
                     System.out.print("Enter height: ");
-                    double height = scan.nextDouble();
+                    double height = scan.nextDouble(); // Read height input for cylinder
                     shape = new Cylinder(radius, height);
-                }
-                case 6 -> {
+                    break;
+                case 6:
                     System.out.print("Enter base length: ");
-                    double base = scan.nextDouble();
+                    double base = scan.nextDouble(); // Read base length for pyramid
                     System.out.print("Enter height: ");
-                    double height = scan.nextDouble();
+                    height = scan.nextDouble(); // Read height input for pyramid
                     shape = new EquilateralPyramid(base, height);
-                }
-                case 7 -> {
+                    break;
+                case 7:
                     System.out.println("Exiting Program...");
-                    scan.close();
-                    return;
-                }
-                default -> {
+                    scan.close(); // Close scanner before exiting
+                    return; // Exit program
+                default:
                     System.out.println("Invalid Choice! Try Again.");
-                    continue;
-                }
+                    continue; // Restart loop for a valid choice
             }
+            
+            // Display calculated values
             System.out.println("\nArea: " + shape.calculateArea());
             System.out.println("Perimeter: " + shape.calculatePerimeter());
-            if (shape instanceof Volume volume) {
-                System.out.println("Volume: " + volume.calculateVolume());
+            
+            // If the shape supports volume calculation, display it
+            if (shape instanceof Volume) {
+                System.out.println("Volume: " + ((Volume) shape).calculateVolume());
             }
             System.out.println("------------------------------------");
         }

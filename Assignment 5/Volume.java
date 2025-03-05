@@ -1,3 +1,6 @@
+// Interface for Volume Calculation
+
 interface Volume {
-    double calculateVolume();
+
+    double calculateVolume(); // Abstract method for volume calculation
 }
