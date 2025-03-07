@@ -56,7 +56,7 @@ public class Main {
                     break;
                 case 6:
                     System.out.print("Enter side length: ");
-                    double sideLength = scan.nextDouble(); // Read side length for pyramid
+                    double sideLength = scan.nextDouble(); // Read side length for equilateral pyramid (tetrahedron)
                     shape = new EquilateralPyramid(sideLength);
                     break;
                 case 7:
@@ -69,12 +69,12 @@ public class Main {
             }
             
             // Display calculated values
-            System.out.println("\nArea: " + shape.calculateArea());
-            System.out.println("Perimeter: " + shape.calculatePerimeter());
+            System.out.println("\nArea: " + String.format("%.2f", shape.calculateArea()));
+            System.out.println("Perimeter: " + String.format("%.2f", shape.calculatePerimeter()));
             
             // If the shape supports volume calculation, display it
             if (shape instanceof Volume) {
-                System.out.println("Volume: " + ((Volume) shape).calculateVolume());
+                System.out.println("Volume: " + String.format("%.2f", ((Volume) shape).calculateVolume()));
             }
             System.out.println("------------------------------------");
         }
