@@ -23,6 +23,18 @@ This is a **menu-driven Java program** that demonstrates the concepts of **Abstr
 ---
 
 ## 📂 Project Structure & Functionalities
+```
+.
+├── Shape.java
+├── Volume.java
+├── Circle.java
+├── Rectangle.java
+├── Square.java
+├── Sphere.java
+├── Cylinder.java
+├── EquilateralPyramid.java
+└── Main.java
+```
 
 ### 📌 [`Shape.java`](Shape.java)
 
