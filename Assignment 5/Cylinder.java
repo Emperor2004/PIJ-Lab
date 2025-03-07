@@ -14,8 +14,8 @@ class Cylinder extends Shape implements Volume {
 
     @Override
     public double calculatePerimeter() {
-        // Circumference of the base (used as perimeter): 2 * π * r
-        return 2 * Math.PI * dim_one;
+        // Circumference of the base and top (used as perimeter): 4 * π * r
+        return 4 * Math.PI * dim_one;
     }
 
     @Override
