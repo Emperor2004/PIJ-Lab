@@ -69,12 +69,14 @@ Represents a **Circle**, extending `Shape`.
 #### 🔹 Functionalities:
 - Implements:
   - `calculateArea()` → Uses formula:  
-    $ A = \pi r^2 $  
+    **A = πr²**
+    
     where:  
     - \( r \) = radius of the circle  
 
   - `calculatePerimeter()` → Uses formula:  
-    $ P = 2\pi r $  
+    **P = 2πr**
+
 
 ---
 
@@ -84,13 +86,15 @@ Represents a **Rectangle**, extending `Shape`.
 #### 🔹 Functionalities:
 - Implements:
   - `calculateArea()` → Uses formula:  
-    $ A = l \times w $  
+    **A = l × w**
+  
     where:  
     - \( l \) = length  
     - \( w \) = width  
 
   - `calculatePerimeter()` → Uses formula:  
-    $ P = 2(l + w) $  
+    **P = 2(l + w)**
+  
 
 ---
 
@@ -100,12 +104,14 @@ Represents a **Square**, extending `Shape`.
 #### 🔹 Functionalities:
 - Implements:
   - `calculateArea()` → Uses formula:  
-    $ A = s^2 $  
+    **A = s²**
+  
     where:  
     - \( s \) = side length  
 
   - `calculatePerimeter()` → Uses formula:  
-    $ P = 4s $  
+    **P = 4s**
+  
 
 ---
 
@@ -115,12 +121,14 @@ Represents a **Sphere**, extending `Shape` and implementing `Volume`.
 #### 🔹 Functionalities:
 - Implements:
   - `calculateArea()` → Uses formula:  
-    $ A = 4\pi r^2 $  
+    **A = 4πr²**
+  
     where:  
     - \( r \) = radius of the sphere  
 
   - `calculateVolume()` → Uses formula:  
-    $ V = \frac{4}{3} \pi r^3 $  
+    **V = (4/3) π r³**
+
 
 ---
 
@@ -130,16 +138,19 @@ Represents a **Cylinder**, extending `Shape` and implementing `Volume`.
 #### 🔹 Functionalities:
 - Implements:
   - `calculateArea()` → Uses formula:  
-    $ A = 2\pi r (r + h) $  
+    **A = 2πr (r + h)**
+  
     where:  
     - \( r \) = radius  
     - \( h \) = height  
 
   - `calculatePerimeter()` → Uses formula:  
-    $ P = 4\pi r $  
+    **P = 4πr**
+  
 
   - `calculateVolume()` → Uses formula:  
-    $ V = \pi r^2 h $  
+    **V = πr²h**
+  
 
 ---
 
@@ -149,15 +160,18 @@ Represents an **Equilateral Pyramid (Square Base)**, extending `Shape` and imple
 #### 🔹 Functionalities:
 - Implements:
   - `calculateArea()` → Uses formula:  
-    $ A_{\text{total}} = (1 + \sqrt{3}) \times s^2 $  
+    **A_total = (1 + √3) × s²**
+  
     where:  
     - \( s \) = side length of the square base  
 
   - `calculatePerimeter()` → Uses formula:  
-    $ P = 4s $  
+    **P = 4s**
+  
 
   - `calculateVolume()` → Uses formula:  
-    $ V = \frac{1}{3} \times s^2 \times h $  
+    **V = (1/3) × s² × h**
+  
     where:  
     - \( s \) = side length of the square base  
     - \( h \) = height of the pyramid  
