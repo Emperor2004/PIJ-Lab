@@ -55,11 +55,9 @@ public class Main {
                     shape = new Cylinder(radius, height);
                     break;
                 case 6:
-                    System.out.print("Enter base length: ");
-                    double base = scan.nextDouble(); // Read base length for pyramid
-                    System.out.print("Enter height: ");
-                    height = scan.nextDouble(); // Read height input for pyramid
-                    shape = new EquilateralPyramid(base, height);
+                    System.out.print("Enter side length: ");
+                    double sideLength = scan.nextDouble(); // Read side length for pyramid
+                    shape = new EquilateralPyramid(sideLength);
                     break;
                 case 7:
                     System.out.println("Exiting Program...");
