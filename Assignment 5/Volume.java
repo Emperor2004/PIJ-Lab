@@ -1,6 +1,7 @@
-// Interface for Volume Calculation
 
+// Interface for shapes that have volume
 interface Volume {
 
-    double calculateVolume(); // Abstract method for volume calculation
+    // Method to calculate volume
+    double calculateVolume();
 }

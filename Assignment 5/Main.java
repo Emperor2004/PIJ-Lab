@@ -56,7 +56,7 @@ public class Main {
                     break;
                 case 6:
                     System.out.print("Enter side length: ");
-                    double sideLength = scan.nextDouble(); // Read side length for equilateral pyramid (tetrahedron)
+                    double sideLength = scan.nextDouble(); // Read side length for equilateral pyramid (square base)
                     shape = new EquilateralPyramid(sideLength);
                     break;
                 case 7:

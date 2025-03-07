@@ -1,17 +1,20 @@
 
 class Circle extends Shape {
 
+    // Constructor for Circle, initializes the radius
     public Circle(double radius) {
-        super(radius, 0, 0); // Only radius is needed
+        super(radius, 0, 0); // Calls parent constructor, only radius is needed
     }
 
     @Override
     public double calculateArea() {
-        return Math.PI * dim_one * dim_one; // πr² formula for area
+        // Area of a circle: π * r^2
+        return Math.PI * dim_one * dim_one;
     }
 
     @Override
     public double calculatePerimeter() {
-        return 2 * Math.PI * dim_one; // 2πr formula for circumference
+        // Circumference of a circle: 2 * π * r
+        return 2 * Math.PI * dim_one;
     }
 }

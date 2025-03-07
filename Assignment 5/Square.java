@@ -1,17 +1,20 @@
 
 class Square extends Shape {
 
+    // Constructor for Square, initializes side length
     public Square(double side) {
-        super(side, 0, 0); // Square needs only one side length
+        super(side, 0, 0); // Calls parent constructor, only side length is needed
     }
 
     @Override
     public double calculateArea() {
-        return dim_one * dim_one; // side²
+        // Area of a square: side^2
+        return dim_one * dim_one;
     }
 
     @Override
     public double calculatePerimeter() {
-        return 4 * dim_one; // 4 × side
+        // Perimeter of a square: 4 * side
+        return 4 * dim_one;
     }
 }
