@@ -17,8 +17,8 @@ class EquilateralPyramid extends Shape implements Volume {
 
     @Override
     public double calculateVolume() {
-        double slantHeight = Math.sqrt(3) / 4 * dim_one; // slant height
-        double height = Math.sqrt(slantHeight * slantHeight - (dim_one / 2) * (dim_one / 2)); // verticle height
-        return (1.0 / 3.0) * dim_one * dim_one * height; // (1/3) × base area × height
+        double halfDiagonal = (Math.sqrt(2) * dim_one) / 2;
+        double height = Math.sqrt((dim_one * dim_one) - (halfDiagonal * halfDiagonal)); // verticle height
+        return (dim_one * dim_one * height) / 3; // (1/3) × base area × height
     }
 }
