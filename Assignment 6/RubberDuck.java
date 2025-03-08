@@ -1,3 +1,4 @@
+// Class for Rubber Duck
 
 class RubberDuck extends Duck {
 

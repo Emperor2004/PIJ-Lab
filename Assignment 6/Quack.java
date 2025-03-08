@@ -1,3 +1,5 @@
+// Class for normal quack
+
 class Quack implements QuackBehavior {
 
     @Override

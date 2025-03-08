@@ -1,3 +1,5 @@
+// Class for normal swimming
+
 class Swim implements SwimBehavior {
 
     @Override

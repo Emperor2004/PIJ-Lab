@@ -1,3 +1,5 @@
+// Class for drowning behavior
+
 class Drown implements SwimBehavior {
 
     @Override

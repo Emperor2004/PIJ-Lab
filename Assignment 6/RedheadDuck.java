@@ -1,3 +1,4 @@
+// Class for Redhead Duck
 
 class RedheadDuck extends Duck {
 

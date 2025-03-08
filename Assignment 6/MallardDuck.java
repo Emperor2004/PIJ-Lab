@@ -1,3 +1,4 @@
+// Class for Mallard Duck
 
 class MallardDuck extends Duck {
 

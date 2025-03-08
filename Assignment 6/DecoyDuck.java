@@ -1,3 +1,4 @@
+// Class for Decoy Duck
 
 class DecoyDuck extends Duck {
 

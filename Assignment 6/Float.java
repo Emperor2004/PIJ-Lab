@@ -1,3 +1,5 @@
+// Class for floating behavior
+
 class Float implements SwimBehavior {
 
     @Override
