@@ -1,4 +1,11 @@
 
+/*
+Name: Om Narayan Pandit
+PRN: 23070126083
+Batch: AIML B1
+*/
+
+// ===== Main.java =====
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -6,6 +13,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        // Display the menu of available operations
         System.out.println("===== Welcome to the Java Calculator! =====");
         System.out.println("Available operations:");
         System.out.println("1. Add");
@@ -22,13 +30,14 @@ public class Main {
 
             int choice;
             try {
-                choice = sc.nextInt();
+                choice = sc.nextInt(); // Read user choice
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a valid integer choice.");
-                sc.nextLine();
+                sc.nextLine(); // Clear invalid input
                 continue;
             }
 
+            // Exit condition
             if (choice == 0) {
                 System.out.println("Exiting the calculator. Goodbye!");
                 break;
@@ -36,16 +45,16 @@ public class Main {
 
             double num1 = 0, num2 = 0;
 
-
             try {
+                // For binary operations, prompt for two numbers
                 if (choice >= 1 && choice <= 4) {
-
                     System.out.print("Enter first number: ");
                     num1 = sc.nextDouble();
                     System.out.print("Enter second number: ");
                     num2 = sc.nextDouble();
-                } else if (choice == 5 || choice == 6 || choice == 7) {
-
+                } 
+                // For unary operations, prompt for one number
+                else if (choice == 5 || choice == 6 || choice == 7) {
                     System.out.print("Enter a number: ");
                     num1 = sc.nextDouble();
                 } else {
@@ -54,13 +63,13 @@ public class Main {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Invalid number format. Please try again.");
-                sc.nextLine();
+                sc.nextLine(); // Clear invalid input
                 continue;
             }
 
-
             try {
-                double result = 0;
+                double result;
+                // Perform the selected operation
                 switch (choice) {
                     case 1 -> result = Calculator.add(num1, num2);
                     case 2 -> result = Calculator.subtract(num1, num2);
@@ -74,13 +83,14 @@ public class Main {
                         continue;
                     }
                 }
+                // Display the result
                 System.out.println("Result: " + result);
             } catch (ArithmeticException e) {
+                // Handle arithmetic-specific errors (e.g., divide by zero)
                 System.out.println("Error in arithmetic operation: " + e.getMessage());
             }
         }
 
-
-        sc.close();
+        sc.close(); // Close the scanner resource
     }
 }
