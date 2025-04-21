@@ -1,14 +1,15 @@
 import java.sql.*;
 import java.util.*;
 
+// This class contains all CRUD operations related to students.
 public class StudentOperations {
 
-    // Creates the 'students' table if it doesn't exist.
-    
+    // Constructor automatically creates table if it doesn't exist.
     public StudentOperations() {
         createTableIfNotExists();
     }
 
+    // Creates 'students' table if it does not already exist.
     private void createTableIfNotExists() {
         String createTableSQL = "CREATE TABLE IF NOT EXISTS students ("
                 + "id INT AUTO_INCREMENT PRIMARY KEY, "
@@ -25,6 +26,7 @@ public class StudentOperations {
         }
     }
 
+    // Adds a new student to the database.
     public void addStudent(Student student) {
         String insertSQL = "INSERT INTO students (name, prn, batch) VALUES (?, ?, ?)";
         try (Connection conn = DBConnection.getConnection();
@@ -37,11 +39,11 @@ public class StudentOperations {
 
             System.out.println("Student added successfully.");
         } catch (SQLException e) {
-            // Duplicate PRN  or Sql connection went bad.
             System.out.println("Error adding student: " + e.getMessage());
         }
     }
 
+    // Displays all students in the database.
     public void displayAllStudents() {
         String selectSQL = "SELECT name, prn, batch FROM students";
         try (Connection conn = DBConnection.getConnection();
@@ -65,6 +67,7 @@ public class StudentOperations {
         }
     }
 
+    // Searches for a student by PRN.
     public void searchStudent(int prn) {
         String selectSQL = "SELECT name, prn, batch FROM students WHERE prn = ?";
         try (Connection conn = DBConnection.getConnection();
@@ -85,6 +88,7 @@ public class StudentOperations {
         }
     }
 
+    // Updates a student's name and batch using their PRN.
     public void updateStudent(int prn, String newName, String newBatch) {
         String updateSQL = "UPDATE students SET name = ?, batch = ? WHERE prn = ?";
         try (Connection conn = DBConnection.getConnection();
@@ -105,6 +109,7 @@ public class StudentOperations {
         }
     }
 
+    // Deletes a student from the database using their PRN.
     public void deleteStudent(int prn) {
         String deleteSQL = "DELETE FROM students WHERE prn = ?";
         try (Connection conn = DBConnection.getConnection();

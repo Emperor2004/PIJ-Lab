@@ -6,12 +6,14 @@ Batch: AIML B1
 
 import java.util.Scanner;
 
+// Main driver class for interacting with the user and handling menu options.
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         StudentOperations ops = new StudentOperations();
 
         while (true) {
+            // Display menu
             System.out.println("\n===== Student Data Entry with MySQL JDBC =====");
             System.out.println("1. Add Student");
             System.out.println("2. Display All Students");
@@ -31,7 +33,7 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    // Add
+                    // Add student
                     System.out.print("Enter Student Name: ");
                     String name = sc.nextLine();
                     System.out.print("Enter Student PRN (integer): ");
@@ -49,12 +51,12 @@ public class Main {
                     break;
 
                 case 2:
-                    // Display
+                    // Display all students
                     ops.displayAllStudents();
                     break;
 
                 case 3:
-                    // Search
+                    // Search student
                     System.out.print("Enter PRN to Search: ");
                     int searchPrn = 0;
                     try {
@@ -67,7 +69,7 @@ public class Main {
                     break;
 
                 case 4:
-                    // Update
+                    // Update student
                     System.out.print("Enter PRN of Student to Update: ");
                     int updatePrn = 0;
                     try {
@@ -85,7 +87,7 @@ public class Main {
                     break;
 
                 case 5:
-                    // Delete
+                    // Delete student
                     System.out.print("Enter PRN of Student to Delete: ");
                     int delPrn = 0;
                     try {
@@ -98,7 +100,7 @@ public class Main {
                     break;
 
                 case 6:
-                    // Exit
+                    // Exit the application
                     System.out.println("Exiting application. Goodbye!");
                     sc.close();
                     return;
