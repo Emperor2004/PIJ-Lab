@@ -16,8 +16,8 @@ class StudentNotFoundException extends Exception {
     }
 }
 
-class CustomExceptions extends Exception {
-        public CustomExceptions(String message) {
+class InvalidMarksException extends Exception {
+        public InvalidMarksException(String message) {
             super(message);
     }
 }
