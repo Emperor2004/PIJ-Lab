@@ -1,8 +1,8 @@
 /*
- * Name  : Parth Ubhe
- * PRN   : 23070126086
- * Batch : B1
- */
+Name: Om Narayan Pandit
+PRN: 23070126083
+Batch: AIML B1
+*/
 
 import java.util.Scanner;
 
